@@ -22,6 +22,9 @@ import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.nio.channels.SocketChannel;
+import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -58,7 +61,10 @@ public class RconClient implements Callable<Integer> {
     public Integer call() {
         String fullCommand = String.join(" ", commands);
         System.out.println("Trying to send command: " + fullCommand);
-        try (Rcon rcon = Rcon.open("localhost", port)) {
+        try (Rcon rcon = Rcon.newBuilder()
+                .withChannel(SocketChannel.open(new InetSocketAddress("localhost", port)))
+                .withCharset(StandardCharsets.ISO_8859_1)
+                .build()) {
             if (rcon.authenticate(new String(Base64.getDecoder().decode(passphrase)))) {
                 System.out.println(rcon.sendCommand(fullCommand));
             } else {

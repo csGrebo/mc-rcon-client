@@ -1,7 +1,9 @@
 
 # grebo Minecraft RCON Wrapper
 
-Wrapper for [jobfeikens/rcon](https://github.com/jobfeikens/rcon) leveraging [picocli](https://picocli.info).
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+Wrapper for [jobfeikens/rcon](https://github.com/jobfeikens/rcon) using [picocli](https://picocli.info).
 
 
 ## Authors

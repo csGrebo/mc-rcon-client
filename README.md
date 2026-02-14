@@ -1,7 +1,7 @@
 
 # grebo Minecraft RCON Wrapper
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Wrapper for [jobfeikens/rcon](https://github.com/jobfeikens/rcon) using [picocli](https://picocli.info).
 
@@ -14,5 +14,5 @@ Wrapper for [jobfeikens/rcon](https://github.com/jobfeikens/rcon) using [picocli
 
 ## License
 
-[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)
+[GNU General Public License, Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 

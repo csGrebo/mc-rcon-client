@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+fatal() {
+  echo "ERROR: ${1:-"UNKNOWN ERROR"}" > &2
+  exit 1
+}
+
+validate() {
+  if [[ ! command -v java ]]; then
+    fatal "Unable to find Java"
+  fi
+
+
+}
+
+do_main() {
+  validate
+  /apps/opt/minecraft/tools/mccontrol/bin/mccontrol "${@}"
+}
